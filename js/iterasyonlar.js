@@ -263,10 +263,10 @@
 // ! acumulative
 // ! çıkışı sadece sayıdı ama return özelliği vardır
 
-const maas = [5500,8000,6500,9000,10000,15000,25000]
+// const maas = [5500,8000,6500,9000,10000,15000,25000]
 
-const totalMaas = maas.reduce((toplam,değer)=>toplam + değer, 0)
-console.log(totalMaas);
+// const totalMaas = maas.reduce((toplam,değer)=>toplam + değer, 0)
+// console.log(totalMaas);
 
 
 
@@ -478,20 +478,36 @@ const carData = [
 
 // 1- Rengi gümüş olan arabaları bir listeye ata.
 
-let result =carData.filter((a)=>a.color=="Silver");
-console.log(result);
+// let result =carData.filter((a)=>a.color =="Silver");
+// console.log(result);
 
 // 2- 2015 yılından sonra üretilmiş arabaları bir listeye ata.
-
+// let result =carData.filter((a)=>a.year > "2015");
+// console.log(result);
 
 // 3- Arabaların ortalama kilometre değerini hesapla.
 
+// let result =carData.reduce((top,a)=> top + a.mileage ,0);
+// console.log(result/carData.length);
+
 // 4- 8 silindirli araçları listele
 
-// 5- Farklı uzunlukta olması muhtemel iki listeden İlki key'lerden, ikincisi ise Value'lardan oluşmaktadır. Yine key ve value'lardan oluşan bir obje döndüren bir fonksiyon yazınız. Yeterli value yoksa, kalan keylerin değeri null olmalıdır. Yeterli anahtar yoksa, değerlerin geri kalanını yok sayın.
+
+
+//! 5- Farklı uzunlukta olması muhtemel iki listeden İlki key'lerden, ikincisi ise Value'lardan oluşmaktadır. Yine key ve value'lardan oluşan bir obje döndüren bir fonksiyon yazınız. Yeterli value yoksa, kalan keylerin değeri null olmalıdır. Yeterli anahtar yoksa, değerlerin geri kalanını yok sayın.
+
+
+
+
 // keys = ['a', 'b', 'c', 'd']
 // values = [1, 2, 3]
 // createDict(keys, values) // returns {'a': 1, 'b': 2, 'c': 3, 'd': null}
+
+
+
+
+
+
 
 // 6- Bir obje içerisindeki key ve value'ları değiştirin. Yani key'ler value'lar olmalı ve value'lar key'ler olmalıdır.
 // Örnek: {a: 1, b: 2, c: 3}  -->  {1: 'a', 2: 'b', 3: 'c'}
@@ -517,3 +533,14 @@ console.log(result);
 // Bu sepetin içindeki ürünlerin fiyatlarının toplamını bulmak için hangi array methodlarını kullanırsınız?
 
 // 10  Her kitap bir nesne olarak temsil edilmekte ve kitap adı, yazarı ve yayın tarihi gibi özelliklere sahip. Bu kitap koleksiyonunu kullanarak yayın tarihi 1950'dan önce olan kitapların listesini eski tarihten başlayarak sıralayıp ekrana yazdırın?
+
+let a = [2, 4, 2, 2, 2, 2, 5, 5, 5, 3, 5, 1, 3, 4, 1, 5, 2, 3, 4, 5, 2, 1, 3, 4, 2, 5]
+let bas = a[1]
+let counter = 0
+for(let i =0; i<a.length; i++){
+  if(bas==a[i]){
+    bas=a[i]
+    counter++
+  }
+}
+console.log(counter);
