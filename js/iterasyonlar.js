@@ -509,12 +509,31 @@ const carData = [
 
 
 
-// 6- Bir obje içerisindeki key ve value'ları değiştirin. Yani key'ler value'lar olmalı ve value'lar key'ler olmalıdır.
-// Örnek: {a: 1, b: 2, c: 3}  -->  {1: 'a', 2: 'b', 3: 'c'}
-// Not: Eğer bir value birden fazla key'e sahipse, son key'i kullanın.
+//! 6- Bir obje içerisindeki key ve value'ları değiştirin. Yani key'ler value'lar olmalı ve value'lar key'ler olmalıdır.
+//! Örnek: {a: 1, b: 2, c: 3}  -->  {1: 'a', 2: 'b', 3: 'c'}
+//! Not: Eğer bir value birden fazla key'e sahipse, son key'i kullanın.
 
-// 7-  Size bazı dilleri ve verilen dillerdeki test sonuçlarınızı içeren bir dictionarj obj verilir. Test puanınızın en az 60 olduğu dillerin listesini sonuçların azalan sırasına göre döndürün.
-// Not: puanlar her zaman benzersiz olacaktır (bu nedenle yinelenen değerler olmayacaktır)
+
+
+
+
+
+
+
+// ! 7-  Size bazı dilleri ve verilen dillerdeki test sonuçlarınızı içeren bir dictionarj obj verilir. Test puanınızın en az 60 olduğu dillerin listesini sonuçların azalan sırasına göre döndürün.
+// ! Not: puanlar her zaman benzersiz olacaktır (bu nedenle yinelenen değerler olmayacaktır)
+
+// let dictionary = {
+//   " Turkish":45,
+//   "English":60,
+//   "German": 75
+// }
+
+// let result = [dictionary].filter((a)=> a."turkish")
+// console.log(result);
+
+
+
 // örnekler
 // {"Java": 10, "Ruby": 80, "Python": 65}    -->  ["Ruby", "Python"]
 // {"Hindi": 60, "Dutch" : 93, "Greek": 71}  -->  ["Dutch", "Greek", "Hindi"]
@@ -534,13 +553,59 @@ const carData = [
 
 // 10  Her kitap bir nesne olarak temsil edilmekte ve kitap adı, yazarı ve yayın tarihi gibi özelliklere sahip. Bu kitap koleksiyonunu kullanarak yayın tarihi 1950'dan önce olan kitapların listesini eski tarihten başlayarak sıralayıp ekrana yazdırın?
 
-let a = [2, 4, 2, 2, 2, 2, 5, 5, 5, 3, 5, 1, 3, 4, 1, 5, 2, 3, 4, 5, 2, 1, 3, 4, 2, 5]
-let bas = a[1]
-let counter = 0
-for(let i =0; i<a.length; i++){
-  if(bas==a[i]){
-    bas=a[i]
-    counter++
-  }
-}
-console.log(counter);
+// let a = [2, 4, 2, 2, 2, 2, 5, 5, 5, 3, 5, 1, 3, 4, 1, 5, 2, 3, 4, 5, 2, 1, 3, 4, 2, 5]
+
+// let b ={}
+// let counter;
+// const result=a.filter((text)=> {
+//  counter =0
+// for(let i =0; i<a.length; i++){
+//      text == a[i] && counter++
+//     b[text] =counter 
+//     }  
+   
+//   }) 
+// console.log(result); // {1: 3, 2: 8, 3: 4, 4: 4, 5: 7} bu şekilde sonuc veriyor ama buradan 2 yi çekemedim.
+// b.forEach((a,i)=>console.log(b[i]));
+
+
+
+// let deger =0
+
+// for (let i of b) {
+//   if (b[i] > deger) {
+//     deger = b[i];
+//     mostrepeated = i;
+//   }
+// }
+// console.log(mostrepeated);
+
+
+
+
+
+// const result= b.filter((i,x)=>{
+  
+//    return
+// })
+// console.log(result);
+
+// let bas = a[1]
+// let counter = 0
+// for(let i =0; i<a.length; i++)
+//   for(let j =0; j<a.length; j++)
+
+
+//   if(bas==a[i]){
+//     bas=a[i]
+   
+//   }
+
+// console.log(counter);
+ let getBudgets = [
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+] 
+const result = getBudgets.reduce((sum,a)=> sum+a.budget,0)
+console.log(result);
